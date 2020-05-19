@@ -1,11 +1,12 @@
 <h1>Users</h1>
-<p>test</p>
-<%= link_to "Create User", new_users_path%>
+
+<%= link_to "Create User", new_user_path%>
 <% @users.each do |user| %>
   <h2><%= user.first_name%></h2>
   <%# <a href='/'> %>
-  <%= link_to 'Show Page', users_path(user)%>
-  <%= link_to 'Edit Page', edit_users_path(user)%>
+  <%= link_to 'Show User', user_path(user)%>
+  <%= link_to 'Edit User', edit_user_path(user)%>
+  <%= link_to 'Delete User', user, method: :delete %>
   
   <%# <a href="/pages/1">Show Page</a> %>
 <% end %>
